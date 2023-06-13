@@ -30,4 +30,6 @@ const questions = [
 function generateSVG() {
     inquirer.prompt(questions).then((answers) => { 
         console.log(answers);
+        fs.writeFile('logo.svg', answers, (err) => {
+            console.log(err);
 } 
