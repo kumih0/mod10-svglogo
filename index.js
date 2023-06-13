@@ -9,5 +9,16 @@ const questions = [
         
     },
     {
+        type: 'input',
+        name: 'color',
+        message:'What is the text color for your logo?',
+
+    },
+    {
+        type: 'list',
+        name: 'shape',
+        message:'What is the shape for your logo?',
+        choices: ['square', 'circle', 'triangle'], 
+    },
+    {
         
-    }
