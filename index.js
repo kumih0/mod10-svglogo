@@ -28,5 +28,6 @@ const questions = [
 ];
 
 function generateSVG() {
-    inquirer.prompt(questions).then((answers) => {  
-}
+    inquirer.prompt(questions).then((answers) => { 
+        console.log(answers);
+} 
