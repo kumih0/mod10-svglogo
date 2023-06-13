@@ -10,7 +10,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'color',
+        name: 'textcolor',
         message:'What is the text color for your logo?',
 
     },
@@ -21,4 +21,12 @@ const questions = [
         choices: ['square', 'circle', 'triangle'], 
     },
     {
-        
+        type: 'input',
+        name: 'shapecolor',
+        message:'What is the shape color for your logo?',
+    },
+];
+
+function generateSVG() {
+    inquirer.prompt(questions).then((answers) => {  
+}
