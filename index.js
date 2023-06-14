@@ -1,7 +1,9 @@
-import fs from 'fs';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
 import inquirer from 'inquirer';
-import { Square, Triangle, Circle } from './lib/shapes';
-import { SVG } from './lib/svg';
+const fs = require('fs');
+const  { Square, Triangle, Circle } = require('./lib/shapes.cjs');
+const SVG = require('./lib/svg.cjs');
 
 const questions = [
     {
@@ -47,7 +49,8 @@ inquirer.prompt(questions).then(({ text, textcolor, shape, shapecolor }) => {
     const svg = new SVG();
     svg.setText(text, textcolor);
     svg.setShape(shapetype);
-    fs.writeFile('logo.svg', svg.render());
+    console.log(svg, shapetype);
+    fs.writeFile('./logo.svg', svg.render());
 })
 
 // .then(function() {

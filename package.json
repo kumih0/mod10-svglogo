@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "## Your Task",
   "type": "module",
-  "main": "index.js",
+  "exports": "./index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"
