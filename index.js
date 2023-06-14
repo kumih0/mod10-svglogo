@@ -1,6 +1,6 @@
 const fs =require('fs');
 const inquirer = require('inquirer');
-const Shape = require('./lib/shapes');
+const Shapes = require('./lib/shapes');
 const SVG = require('./lib/svg');
 
 const questions = [
@@ -32,7 +32,7 @@ const questions = [
  inquirer.prompt(questions).then(answers, function({text, textcolor, shape, shapecolor}) {
         const svg = new SVG();
         svg.setText(text, textcolor);
-        const shape = new Shape();
+        const shape = new Shapes();
         shape.setColor(shapecolor);
         svg.setShape(shape);
         fs.writeFile('logo.svg', svg.render());
