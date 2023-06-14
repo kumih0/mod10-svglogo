@@ -1,5 +1,7 @@
 const fs =require('fs');
 const inquirer = require('inquirer');
+const Shape = require('./lib/shapes');
+const SVG = require('./lib/svg');
 
 const questions = [
     {
@@ -25,11 +27,20 @@ const questions = [
         name: 'shapecolor',
         message:'What is the shape color for your logo?',
     },
-];
+]
 
-function generateSVG() {
-    inquirer.prompt(questions).then((answers) => { 
-        console.log(answers);
-        fs.writeFile('logo.svg', answers, (err) => {
-            console.log(err);
-} 
+ inquirer.prompt(questions).then(answers, function({text, textcolor, shape, shapecolor}) {
+        const svg = new SVG();
+        svg.setText(text, textcolor);
+        const shape = new Shape();
+        shape.setColor(shapecolor);
+        svg.setShape(shape);
+        fs.writeFile('logo.svg', svg.render());
+    })
+
+// .then(function() {
+//     console.log(text, textcolor, shape, shapecolor);
+
+
+// function generateSVG({text, textcolor, shape, shapecolor}) {
+//     return inquirer.prompt(questions).then(generateSVG({text, textcolor, shape, shapecolor})
