@@ -2,6 +2,7 @@
   "name": "mod10-svglogo",
   "version": "1.0.0",
   "description": "## Your Task",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "example": "examples",
