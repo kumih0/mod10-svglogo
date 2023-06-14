@@ -49,8 +49,8 @@ inquirer.prompt(questions).then(({ text, textcolor, shape, shapecolor }) => {
     const svg = new SVG();
     svg.setText(text, textcolor);
     svg.setShape(shapetype);
-    console.log(svg, shapetype);
-    fs.writeFile('./logo.svg', svg.render());
+    console.log(svg.render());
+    fs.writeFile('./logo.svg', svg.render(), (err) => {err ? console.log(err) : console.log('it works dummy')});
 })
 
 // .then(function() {
