@@ -96,8 +96,10 @@ https://drive.google.com/file/d/1_Lqm9frFvpSsjuBCxKH7BHoHO2O3nB20/view
 
 # References 
 Link of documentation references I used for working around cjs & esm
-node.js :
+- node.js :
 - (https://nodejs.org/docs/latest-v18.x/api/module.html#modulecreaterequirefilename)
 - (https://nodejs.org/docs/latest-v18.x/api/esm.html#interoperability-with-commonjs)
-inquirer: (https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md#reactive)
-ESM package: (https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+- inquirer: 
+- (https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/README.md#reactive)
+- ESM package: 
+- (https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
