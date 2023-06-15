@@ -44,18 +44,13 @@ inquirer.prompt(questions).then(({ text, textcolor, shape, shapecolor }) => {
             shapetype = new Triangle();
             break;
     }
+
     shapetype.setColor(shapecolor);
 
     const svg = new SVG();
     svg.setText(text, textcolor);
     svg.setShape(shapetype);
     console.log(svg.render());
-    fs.writeFile('./logo.svg', svg.render(), (err) => {err ? console.log(err) : console.log('it works dummy')});
+    
+    fs.writeFile('./logo.svg', svg.render(), (err) => {err ? console.log(err) : console.log('it works dummy!! U generated logo.svg')});
 })
-
-// .then(function() {
-//     console.log(text, textcolor, shape, shapecolor);
-
-
-// function generateSVG({text, textcolor, shape, shapecolor}) {
-//     return inquirer.prompt(questions).then(generateSVG({text, textcolor, shape, shapecolor})
