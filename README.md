@@ -7,9 +7,12 @@ Simple CLI program that builds a basic svg file from user input.  Uses inquirer 
 
 # Notes
 ```md
-    I used the latest versions of jest and inquirer and ran into issues with inoperability across CommonJS and EMS formats.  I referenced the documentation for both the Node version I'm running (18.~), inquirer, and jest, to troubleshoot.
+    I used the latest versions of jest and inquirer and ran into issues with inoperability across CommonJS and EMS formats.  
+    I referenced the documentation for both the Node version I'm running (18.~), inquirer, and jest, to troubleshoot.
 
-    I imported the require function from the node:modules library to do a cheeky workaround and make the import syntax match what we've done in class, and updated the package.json properties. (adding "type": "module", and replacing "main": "index.js" with "exports": "./index.js").  I also had to change the file type suffixes to cjs vs js (CommonJS) in order to make node.js happy and stop spitting at me.
+    I imported the require function from the node:modules library to do a cheeky workaround and make the import syntax match what we've done in class, and updated the package.json properties. 
+    (adding "type": "module", and replacing "main": "index.js" with "exports": "./index.js").  
+    I also had to change the file type suffixes to cjs vs js (CommonJS) in order to make node.js happy and stop spitting at me.
 ```
 
 ## User Story
